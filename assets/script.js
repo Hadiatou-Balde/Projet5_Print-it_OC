@@ -16,3 +16,13 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+//Ajout des event listener
+const arrows = document.querySelectorAll(".arrow");
+
+arrows.forEach((arrow) => {
+	arrow.addEventListener('click', (e) => {
+		console.log(e.target.id);
+	})
+})
+
