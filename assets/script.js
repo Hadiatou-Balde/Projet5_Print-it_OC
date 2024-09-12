@@ -21,6 +21,7 @@ const slides = [
 document.addEventListener('DOMContentLoaded', function() {
 	let currentSlide = 0;
 	const bannerImg = document.querySelector('.banner-img');
+	const tagline = document.querySelector('.tagline');
 	const dots = document.querySelectorAll('.dot');
 
 	//Ajout des event listener
@@ -30,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		if(bannerImg) {
 			bannerImg.src = `./assets/images/slideshow/${slides[index].image}`;
 
+			//Mettre à jour la tagline
+			if(tagline){
+				tagline.innerHTML = slides[index].tagLine;
+			}
+			
 			//Mettre à jour les points actifs
 			dots.forEach(dot => dot.classList.remove('active'));
 			if(dots[index]) {
